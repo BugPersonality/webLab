@@ -197,7 +197,7 @@ header #logo span {
 #animal {
     padding: 100px 20%;
     width: 60%;
-    height: 1000px;
+    height: 300px;
     float: left;
     background-color: #181a1e;
     color: #fefefe;
@@ -222,4 +222,16 @@ header #logo span {
 #animal a {
     text-decoration: underline;
     color: #fefefe;
+}
+
+/* footer style */
+
+#footer {
+    width: 100%;
+    height: 30px;
+    float: left;
+    background-color: #181a1e;
+    color: #fefefe;
+    border-top: 2px solid silver;
+    font-size: 1em;
 }
