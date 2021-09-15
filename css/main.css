@@ -108,7 +108,7 @@ header #logo span {
 
 #top {
     width: 100%;
-    height: 700px;
+    height: 800px;
     background-color: #181a1e; 
     background-size: cover;
     text-align: center;
@@ -118,6 +118,12 @@ header #logo span {
 
 #top h1 {
     padding-top: 20%;
+}
+
+#top ul li::before {
+    content: "\2022";
+    color: #fefefe; 
+    font-weight: bold;
 }
 
 @media (min-width: 1001px) {
