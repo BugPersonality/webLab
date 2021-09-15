@@ -120,12 +120,6 @@ header #logo span {
     padding-top: 20%;
 }
 
-#top ul li::before {
-    content: "\2022";
-    color: #fefefe; 
-    font-weight: bold;
-}
-
 @media (min-width: 1001px) {
     #top {
         font-size: 3em;
