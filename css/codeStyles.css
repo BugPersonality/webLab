@@ -1,0 +1,12 @@
+#bestCode span.keys { 
+    color: #f080b0;
+}
+#bestCode span.funcNames { 
+    color: #67aabe;
+}
+#bestCode span.types { 
+    color: #d3bcf8;
+}
+#bestCode span.darkTypes {
+    color: #9e7dd1;
+}

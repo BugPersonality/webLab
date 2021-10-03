@@ -20,10 +20,26 @@ body {
 
 header {
     width: 100%;
-    /* padding: 10px 0.5% 0px 0.5%; */
+    padding: 10px 1% 10px 1%;
     background: transparent;
     float: left;
     position: fixed;
+}
+
+header #logo {
+    align-items: center;
+    height: 100px;
+    width: 30%;
+    margin-right: 2%;
+    float: left;
+}
+
+header #about {
+    align-items: center;
+    height: 100px;
+    width: 66%;
+    margin-right: 2%;
+    float: left;
 }
 
 header #logo {
@@ -31,57 +47,29 @@ header #logo {
     cursor: pointer;
 }
 
-header #logo image {
-    border-radius: 50%;
-}
-
 header #hp {
-    float: left;    
-    margin: 0 0 30px 0;
+    float: left;   
+    width: 75px;
+    height: 75px; 
+    border-radius: 50%;
+    margin: 0px 30px 0px 30px;
 }
 
 header #logo span {
     font-size: 1.7em;
-    line-height: 45px;
-    margin-left: 40px;
+    line-height: 75px;
     font-family: 'Roboto', serif;
-}
-
-@media (min-width: 701px) {
-    #logo {
-        float: left;
-        width: 30%;
-        font-size: 1.1em;
-    }
-
-    #about {
-        float: right;
-        width: 70%;
-    }
-}
-
-@media (max-width: 700px) {
-    #logo {
-        margin-top: 15px;
-        width: 100%;
-        font-size: 1.5em;
-    }
-
-    #about {
-        float: left;
-        width: 100%;
-    }
 }
 
 #about {
     text-align: center;
-    font-size: 1.3em;
-    line-height: 40px;
-    margin-bottom: 10px;
+    font-size: 1.7em;
+    line-height: 75px; 
 }
 
 #about > a {
     color: #fefefe;
+    margin-left: 0%;
     margin-right: 7%;
 }
 
@@ -120,24 +108,6 @@ header #logo span {
     padding-top: 20%;
 }
 
-@media (min-width: 1001px) {
-    #top {
-        font-size: 3em;
-    }
-}
-
-@media (max-width: 1000px) and (min-width: 651px) {
-    #top {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 650px) {
-    #top {
-        font-size: 1.3em;
-    }
-}
-
 /* formulaForSuccess style */
 
 #formulaForSuccess {
@@ -162,7 +132,7 @@ header #logo span {
 }
 
 #formulaForSuccess span {
-    color: darkgray;
+    color: darkgray
 }
 
 /* bestCode style */
@@ -226,7 +196,7 @@ header #logo span {
 
 /* footer style */
 
-#footer {
+footer {
     width: 100%;
     height: 30px;
     float: left;
