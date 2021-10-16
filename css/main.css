@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* 
++ Добавить тени 
++ Добавить насыщенность шрифта
++ formulaForSuccess в div - span исправить поставить <p>
++ еще <p> поменять в некоторых меатах 
++ <section id="top"> навести красоту исправить H3 исправить список 
+
++ 1em = 12pt = 16px = 100%.
+
+Разницу между этими единицами легко понять на конкретных примерах. 
+Вот как они соотносятся друг с другом: 1em = 12pt = 16px = 100%. 
+Давайте посмотрим, что произойдет, когда мы увеличим основной размер шрифта 
+(используя CSS-селектор body) с 100% до 120%.
+
+Как видите, Эм и Процент увеличиваются по мере увеличения основного размера шрифта,
+а Пиксели и Точки – нет. Легко использовать абсолютный размер для вашего текста, 
+но намного легче использовать масштабируемый текст, который отображается на любом устройстве. 
+Поэтому для текста веб-документа предпочтительнее использовать единицы Эм и Проценты.
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -53,10 +73,12 @@ header #hp {
     height: 75px; 
     border-radius: 50%;
     margin: 0px 30px 0px 30px;
+    box-shadow: 5px 2.5px 5px black;
 }
 
 header #logo span {
     font-size: 1.7em;
+    font-weight: bold;
     line-height: 75px;
     font-family: 'Roboto', serif;
 }
@@ -82,6 +104,7 @@ header #logo span {
     z-index: 5000;
     background-color: #fefefe;
     border-bottom: 1px solid silver;
+
 }
 
 .fixed #about a {
@@ -90,6 +113,10 @@ header #logo span {
 
 .fixed #logo span {
     color: #181a1e;
+}
+
+.fixed #logo img {
+    box-shadow: 5px 2.5px 5px black;
 }
 
 /* top bloc style */
@@ -106,6 +133,15 @@ header #logo span {
 
 #top h1 {
     padding-top: 20%;
+    margin-bottom: 30px;
+}
+
+#top p {
+    font-size: 1.2em;
+}
+
+#top .leaf li {
+    padding: 2px 5px;
 }
 
 /* formulaForSuccess style */
@@ -131,7 +167,7 @@ header #logo span {
     font-size: 3em;
 }
 
-#formulaForSuccess span {
+#formulaForSuccess p {
     color: darkgray
 }
 
@@ -147,7 +183,7 @@ header #logo span {
     border-top: 2px solid silver;
     font-size: 1em;
 }
-  
+
 #bestCode div {
     width: 48%;
     margin-right: 2%;
@@ -158,7 +194,7 @@ header #logo span {
     font-size: 3em;
 }
 
-#bestCode span {
+#bestCode p {
     color: darkgray;
 }
 
@@ -174,7 +210,7 @@ header #logo span {
     border-top: 2px solid silver;
     font-size: 1em;
 }
-  
+
 #animal div {
     width: 48%;
     margin-right: 2%;
@@ -185,7 +221,7 @@ header #logo span {
     font-size: 3em;
 }
 
-#animal span {
+#animal p {
     color: darkgray;
 }
 
