@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/submenu.css">
+        <link rel="stylesheet" href="css/contacts.css">
+        <script src="js/code.js"></script>
+        <title>Дубов Данил М33041</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/itsMe.png" alt="Avatar" id="hp">
+            <span>Дубов Данил</span>
+        </div>
+
+        <div id="about" class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Меню</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html" type="submenu" name="index">Основная</a>
+                <a href="table.html" type="submenu" name="table">Таблица</a>
+                <a href="contacts.html" type="submenu" name="contacts">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="tg">
+            <p> Telegram: <a href="https://t.me/BugPersonality">@BugPersonality</a> </p>
+        </section>
+
+        <section id="vk">
+            <p> VK: <a href="https://vk.com/d.dubov2000">Дубов Данил Любит WEB</a> </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Дубов Данил Денисович</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).on("scroll", function() {
+            if($(window).scrollTop() === 0) 
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+            });
+        </script>
+</body>
+</html>

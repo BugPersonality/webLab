@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/codeStyles.css">
+        <link rel="stylesheet" href="css/submenu.css">
+        <script src="js/code.js"></script>
         <title>Дубов Данил М33041</title>
     </head>
 
@@ -15,9 +17,17 @@
             </div>
 
             <nav id="about">
-                <a href="#" title="ФормулаУспеха" onclick="slowScroll('#formulaForSuccess')">Формула успеха</a>
-                <a href="#" title="ЛучшийКод" onclick="slowScroll('#bestCode')">Лучший код</a>
-                <a href="#" title="ТотемноеЖивотное" onclick="slowScroll('#animal')">Тотемное животное</a>
+                <a href="#" title="ФормулаУспеха" onclick="slowScroll('#formulaForSuccess')">Формула</a>
+                <a href="#" title="ЛучшийКод" onclick="slowScroll('#bestCode')">Код</a>
+                <a href="#" title="ТотемноеЖивотное" onclick="slowScroll('#animal')">Тотем</a>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Меню</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="index.html" type="submenu" name="index">Основная</a>
+                      <a href="table.html" type="submenu" name="table">Таблица</a>
+                      <a href="contacts.html" type="submenu" name="contacts">Контакты</a>
+                    </div>
+                  </div>
             </nav>
         </header>
 
@@ -95,48 +105,7 @@ _.-._)`\_.-._)`\_.-._)`\_.-._)`\_.-._
 </pre>
                 </div>
             </section>
-        </main>
-
-        <section id="Table">
-            <table>
-                <caption>Все совпадения абсолютно случайны</caption>
-                <thead>
-                <tr>
-                    <th scope="col">Вид</th>
-                    <th scope="col">Стоимось</th>
-                    <th scope="col">Максимальная доза</th>
-                    <th scope="col">Длительность</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td data-label="Вид">Травка</td>
-                    <td data-label="Стоимось">2000 рублей</td>
-                    <td data-label="Максимальная доза">60 грамм</td>
-                    <td data-label="Длительность">4 часа</td>
-                </tr>
-                <tr>
-                    <td scope="row" data-label="Вид">Кислота</td>
-                    <td data-label="Стоимось">2000 рублей</td>
-                    <td data-label="Максимальная доза">300-600-кратная передозировка</td>
-                    <td data-label="Длительность">8-12 часов</td>
-                </tr>
-                <tr>
-                    <td scope="row" data-label="Вид">Скорость</td>
-                    <td data-label="Стоимось">2000 рублей</td>
-                    <td data-label="Максимальная доза">10 грамм</td>
-                    <td data-label="Длительность">5-6 часов</td>
-                </tr>
-                <tr>
-                    <td scope="row" data-label="Вид">Грибы</td>
-                    <td data-label="Стоимось">2000 рублей</td>
-                    <td data-label="Максимальная доза">100 грамм</td>
-                    <td data-label="Длительность">6-8 часов</td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-        
+        </main>        
         
         <footer>
             <p>© Дубов Данил Денисович</p>
