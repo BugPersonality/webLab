@@ -22,10 +22,10 @@ document.addEventListener("mouseout", function(event) {
     if (event.target.type == "submenu") {
         event.target.style.backgroundColor = "#fefefe";
     }
-}, false);
+});
 
 document.addEventListener("mouseover", function(event) {
     if (event.target.type == "submenu") {
         event.target.style.backgroundColor = "#181a1e";
     }
-}, false);
+});
