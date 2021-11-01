@@ -109,60 +109,36 @@ header #logo span {
     box-shadow: 5px 2.5px 5px black;
 }
 
-/* Media Header - Nav - About */
+header {
+    display: flex;
+    justify-content: space-between;
+}
 
-@media screen and (max-width: 821px) {
+header #about {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2 1 300px;
+}
+
+header #logo {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 2 300px;
+}
+
+@media screen and (max-width: 550px) {
     header #about {
-        display: grid;
-        grid-template-columns: 1fr;
-        height: 320px;
+        flex-flow: row wrap;
     }
+}
 
+@media screen and (max-width: 750px) {
     header #logo {
-        height: 320px;
+        flex-flow: row wrap;
     }
 
     header {
-        height: 320px;
-    }
-}
-
-@media screen and (max-width: 1230px) and (min-width: 822px) {
-    header #about {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: 170px;
-    }
-
-    header #logo {
-        height: 170px;
-    }
-
-    header {
-        height: 170px;
-    }
-}
-
-@media screen and (min-width: 1231px) {
-    header #about {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-/* Media Header - logo */ 
-
-@media screen and (min-width: 1072px) {
-    header #logo {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 1133px) {
-    header #logo {
-        display: grid;
-        grid-template-columns: 1fr;
+        height: 140px;
     }
 }
 

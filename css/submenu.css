@@ -1,16 +1,19 @@
 .dropbtn {
-    background-color: #181a1e;
     color: #fefefe;
+    border-bottom: none;
     text-decoration: underline;
     font-size: 1.1em;
     line-height: 75px; 
     padding: 16px;
     border: none;
     cursor: pointer;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    outline: none;
 }
 
 .fixed .dropbtn {
-    background-color: #fefefe;
     color: #181a1e;
 }
 
