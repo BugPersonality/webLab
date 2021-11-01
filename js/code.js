@@ -12,20 +12,37 @@ function Pageloadtime() {
 
     var element = document.getElementsByName(nowPageMenu);
     element[0].style.textDecoration = "underline";
+
+    document.getElementById("myDropdown").addEventListener("mouseout", function(event) {
+        event.target.style.backgroundColor = "#fefefe";
+        event.target.style.color = "#181a1e";
+    });
+    
+    document.getElementById("myDropdown").addEventListener("mouseover", function(event) {
+        event.target.style.backgroundColor = "#181a1e";
+        event.target.style.color = "#fefefe";
+    });
 }
 
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-document.addEventListener("mouseout", function(event) {
-    if (event.target.type == "submenu") {
-        event.target.style.backgroundColor = "#fefefe";
-    }
-});
+// document.addEventListener("mouseout", function(event) {
+//     if (event.target.type == "submenu") {
+//         event.target.style.backgroundColor = "#fefefe";
+//         event.target.style.color = "#181a1e";
+//     }
+// });
 
-document.addEventListener("mouseover", function(event) {
-    if (event.target.type == "submenu") {
-        event.target.style.backgroundColor = "#181a1e";
-    }
-});
+// document.addEventListener("mouseover", function(event) {
+//     if (event.target.type == "submenu") {
+//         event.target.style.backgroundColor = "#181a1e";
+//         event.target.style.color = "#fefefe";
+//     }
+// });
+
+// Белый текст при наведении + 
+// Исправить сабменю +
+// document.get добавить + 
+// исправть flex + 

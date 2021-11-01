@@ -111,19 +111,19 @@ header #logo span {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content:start;
 }
 
 header #about {
     display: flex;
     justify-content: flex-end;
-    flex: 2 1 300px;
+    flex: 2 1 290px;
 }
 
 header #logo {
     display: flex;
     justify-content: flex-start;
-    flex: 1 2 300px;
+    flex: 1 2 230px;
 }
 
 @media screen and (max-width: 550px) {
@@ -132,7 +132,7 @@ header #logo {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     header #logo {
         flex-flow: row wrap;
     }

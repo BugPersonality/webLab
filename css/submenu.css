@@ -18,11 +18,15 @@
 }
 
 .dropdown {
+    display: flex;
+    flex-direction: column;
+    vertical-align:middle;
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-content {
+    top: 100px;
+    left: -50px;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
