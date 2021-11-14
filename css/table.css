@@ -211,6 +211,39 @@ header #logo span {
     box-shadow: 5px 2.5px 5px black;
 }
 
+header {
+    display: flex;
+    justify-content:start;
+}
+
+header #about {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2 1 290px;
+}
+
+header #logo {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 2 230px;
+}
+
+@media screen and (max-width: 550px) {
+    header #about {
+        flex-flow: row wrap;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header #logo {
+        flex-flow: row wrap;
+    }
+
+    header {
+        height: 140px;
+    }
+}
+
 /* footer style */
 
 footer {

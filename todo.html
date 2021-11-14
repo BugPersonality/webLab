@@ -1,0 +1,84 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/todoStyles.css">
+        <link rel="stylesheet" href="css/submenu.css">
+
+        <script src="js/todoScript.js"></script>
+        <!-- <script src="js/code.js"></script> -->
+        <title>Дубов Данил М33041</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="logo">
+                <img src="images/itsMe.png" alt="Avatar" id="hp">
+                <span>ДубовДанил</span>
+            </div>
+    
+            <div id="about">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Меню</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="index.html" type="submenu" name="index" class="subMenuItem">Основная</a>
+                      <a href="table.html" type="submenu" name="table" class="subMenuItem">Таблица</a>
+                      <a href="contacts.html" type="submenu" name="contacts" class="subMenuItem">Контакты</a>
+                      <a href="todo.html" type="submenu" name="todo" class="subMenuItem">ТУДУ</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <main>
+            <div class="container">
+                <div class="app">
+                    <h2>ТУДУ</h2>
+                    <form>
+                        <input type="text" placeholder="Task...?">
+                        <button type="submit" onclick="addTask();return false">
+                            &plus;
+                        </button>
+                    </form>
+                    <ul></ul>
+                    <!-- <ul>
+                        <li>
+                            <input type="checkbox" onclick="taskComplete(this)" class="check">
+                            <input type="text" value="Test1" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                            <button type="delete" onclick="removeTask(this)">
+                                &minus;
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="taskComplete(this)" class="check">
+                            <input type="text" value="Test2" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                            <button type="delete" onclick="removeTask(this)">
+                                &minus;
+                            </button>
+                        </li>
+                        <li>
+                            <input type="checkbox" onclick="taskComplete(this)" class="check">
+                            <input type="text" value="Test3" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+                            <button type="delete" onclick="removeTask(this)">
+                                &minus;
+                            </button>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <p>© Дубов Данил Денисович</p>
+        </footer>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+                $(document).on("scroll", function() {
+                if($(window).scrollTop() === 0) 
+                    $("header").removeClass("fixed");
+                else
+                    $("header").attr("class", "fixed");
+                });
+            </script>
+    </body>
+</html>

@@ -143,26 +143,123 @@ header #logo {
     }
 }
 
-/* main  */
+/* main */
 
-#tg, #vk {
+.container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 120px 30%;
+    padding-top: 200px;
+    min-height: 100vh;
+}
+
+.app {
+    width: 60%;
+}
+
+@media (max-width: 760px) {
+    .app {
+        width: 90%;
+    }
+}
+
+.app h2 {
+    color: #181a1e;
+    font-size: 40px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: .5rem .5rem 0 0;
+    background-color: #fefefe;
+}
+
+.app form {
+    display: flex;
     width: 100%;
-    height: 50px;
-    float: left;
     background-color: #181a1e;
-    color: #fefefe;
-    border-top: 2px solid silver;
-    font-size: 1em;
+    border: #fefefe;
 }
 
-#tg, #vk p {
-    color: darkgray;
+.app form input {
+    border-width: 1px;
+    border-color: #fefefe;
+    border-bottom-right-radius: .5rem .5rem 0 0;
+
+    background-color: #181a1e;
+    font-size: 18px;
+    color:  white;
+    padding: 10px;
+    width: 90%;
+    height: 42px;
 }
 
+.app form button {
+    border-width: 1px;
+    border-color: #fefefe;
+    border-bottom-right-radius: .5rem .5rem 0 0;
 
-/* footer style */
+    color: white;
+    background-color: #181a1e;
+    font-size: 25px;
+    font-weight: 600;
+    height: 42px;
+    width: 10%;
+}
+
+.app form button:hover {
+    background-color: rgb(255, 82, 82);
+}
+
+.app ul {
+    list-style: none;
+    color: #e0e0e0;
+    padding: 0;
+}
+
+.app ul li {
+    position: relative;
+    padding: 10px;
+    background-color: #181a1e;
+    border-bottom: 1px solid #fefefe;
+}
+
+.check {
+    width: 0.8em;
+    height: 0.8em;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255);
+    -webkit-appearance: none;
+}
+
+.check:checked {
+    background-color: #e65213;
+}
+
+.task {
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+.task:focus {
+    outline: none;
+  }
+  
+.app ul li button {
+    float: right;
+    cursor: pointer;
+}
+
+.app ul li button:hover {
+    background-color: rgb(255, 82, 82);
+}
+
+.complete {
+    color: rgba(192, 192, 192, 0.842);
+    text-decoration: line-through;
+}
+
+/* footer */
 
 footer {
     position: relative;
