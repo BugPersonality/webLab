@@ -3,9 +3,10 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/todoStyles.css">
         <link rel="stylesheet" href="css/submenu.css">
+        <link rel="stylesheet" href="css/preloader.css">
 
         <script src="js/todoScript.js"></script>
-        <!-- <script src="js/code.js"></script> -->
+        <script src="js/preloader.js"></script>
         <title>Дубов Данил М33041</title>
     </head>
 
@@ -33,12 +34,16 @@
             <div class="container">
                 <div class="app">
                     <h2>ТУДУ</h2>
-                    <form onsubmit="addTask()">
-                        <input type="text" id="textsend" placeholder="Task...?" onkeyup="success()">
-                        <button type="submit" id="button" disabled>
+                    <form onsubmit="addRandomTask();return false;">
+                        <input type="text" id="textsend" placeholder="Добавить рандомное задание" readonly="readonly">
+                        <button type="submit" id="button">
                             &plus;
                         </button>
                     </form>
+                    <img alt="preloader" class="preloader none" src="images/preloader.gif">
+                    <div class="wrong">
+                        <input type="text" id="wrong" class="task none" value="⚠ Что-то пошло не так(" readonly="readonly">
+                    </div>
                     <ul id="tasks">
                         <template id="template">
                             <li>

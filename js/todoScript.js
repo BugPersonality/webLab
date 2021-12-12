@@ -23,7 +23,7 @@ function Pageloadtime() {
         event.target.style.color = "#fefefe";
     });
 
-    loadTask()
+    loadTask();
 }
 
 function myFunction() {
@@ -46,33 +46,19 @@ function loadTask() {
     });
 }
 
-function addTask() {
-    const task = document.querySelector("form input");
-
-    let tasks;
-    !localStorage.tasks ? tasks = [] : tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
-
-    let flag = 0;
-    tasks.forEach(todo => {
-        if (todo.task === task.value) {
-            alert("NEW TASK MB....?");
-            task.value = "";
-            flag = 1;
-        }
-    });
-
-    if (flag === 0) {
-        localStorage.setItem("tasks", JSON.stringify([...JSON.parse(localStorage.getItem("tasks") || "[]"), {
-            task: task.value,
-            completed: false
-        }]));
-
-        let template = document.getElementById('template').content.cloneNode(true);
-        let _tasks = document.getElementById("tasks");
-        template.childNodes[1].childNodes[1].childNodes[3].setAttribute('value', task.value);
-        _tasks.appendChild(template);
-        task.value = "";
+function addTask(value, completed) {
+    let template = document.getElementById('template').content.cloneNode(true);
+    let _tasks = document.getElementById("tasks");
+    template.childNodes[1].childNodes[1].childNodes[3].setAttribute('value', value);
+    if (completed) {
+        template.childNodes[1].childNodes[1].childNodes[1].setAttribute('checked', '');
+        template.childNodes[1].childNodes[1].childNodes[3].classList.add('completed');
     }
+    _tasks.appendChild(template);
+}
+
+async function addRandomTask() {
+    await load(1);
 }
 
 var currTaks = null;
@@ -107,12 +93,4 @@ function removeTask(event) {
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
     event.parentElement.parentElement.remove();
-}
-
-function success() {
-    if (document.getElementById("textsend").value.trim()==="") {
-        document.getElementById('button').disabled = true;
-    } else {
-        document.getElementById('button').disabled = false;
-    }
 }
