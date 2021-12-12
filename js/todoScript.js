@@ -35,84 +35,50 @@ function loadTask() {
     !localStorage.tasks ? tasks = [] : tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 
     tasks.forEach(task => {
-        const list = document.querySelector("ul");
-        const li = document.createElement("li");
-
-        li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check" ${task.completed ? 'checked' : ''}>
-        <input type="text" value="${task.task}" class="task ${task.completed ? 'completed' : ''}" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-        <button type="delete" onclick="removeTask(this)">
-            &minus;
-        </button>`;
-          
-        list.insertBefore(li, list.children[0]);
+        let template = document.getElementById('template').content.cloneNode(true);
+        let _tasks = document.getElementById("tasks");
+        template.childNodes[1].childNodes[1].childNodes[3].setAttribute('value', task['task']);
+        if (task['completed']) {
+            template.childNodes[1].childNodes[1].childNodes[1].setAttribute('checked', '');
+            template.childNodes[1].childNodes[1].childNodes[3].classList.add('completed');
+        }
+        _tasks.appendChild(template);
     });
 }
 
 function addTask() {
     const task = document.querySelector("form input");
-    const list = document.querySelector("ul");
-
-    if (task.value === "") {
-        alert("TASK ..........????????");
-        return false;
-    }
 
     let tasks;
     !localStorage.tasks ? tasks = [] : tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 
+    let flag = 0;
     tasks.forEach(todo => {
         if (todo.task === task.value) {
             alert("NEW TASK MB....?");
             task.value = "";
-            return;
+            flag = 1;
         }
     });
 
-    localStorage.setItem("tasks", JSON.stringify([...JSON.parse(localStorage.getItem("tasks") || "[]"), { task: task.value, completed: false }]));
+    if (flag === 0) {
+        localStorage.setItem("tasks", JSON.stringify([...JSON.parse(localStorage.getItem("tasks") || "[]"), {
+            task: task.value,
+            completed: false
+        }]));
 
-    const li = document.createElement("li");
-
-    li.innerHTML = `<input type="checkbox" onclick="taskComplete(this)" class="check">
-    <input type="text" value="${task.value}" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-    <button type="delete" onclick="removeTask(this)">
-        &minus;
-    </button>`;
-
-    list.insertBefore(li, list.children[0]);
-    task.value = "";
+        let template = document.getElementById('template').content.cloneNode(true);
+        let _tasks = document.getElementById("tasks");
+        template.childNodes[1].childNodes[1].childNodes[3].setAttribute('value', task.value);
+        _tasks.appendChild(template);
+        task.value = "";
+    }
 }
 
 var currTaks = null;
 
 function getCurrentTask(event) {
     currTaks = event.value;
-}
-
-function editTask(event) {
-    let tasks;
-    !localStorage.tasks ? tasks = [] : tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
-
-    if (event.value === "") {
-        alert("TASK ..........????????");
-        event.value = currTaks;
-        return;
-    }
-
-    tasks.forEach(task => {
-        if (task.task === event.value) {
-            alert("NEW TASK MB....?");
-            event.value = currTaks;
-            return false;
-        }
-    });
-
-    tasks.forEach(task => {
-        if (task.task === currTaks) {
-          task.task = event.value;
-        }
-    });
-
-    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function taskComplete(event) {
@@ -140,5 +106,13 @@ function removeTask(event) {
     });
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
-    event.parentElement.remove();
+    event.parentElement.parentElement.remove();
+}
+
+function success() {
+    if (document.getElementById("textsend").value.trim()==="") {
+        document.getElementById('button').disabled = true;
+    } else {
+        document.getElementById('button').disabled = false;
+    }
 }

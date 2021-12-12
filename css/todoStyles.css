@@ -205,8 +205,16 @@ header #logo {
     width: 10%;
 }
 
+.app form button:disabled {
+    background-color: rgb(84, 84, 84);
+}
+
 .app form button:hover {
     background-color: rgb(255, 82, 82);
+}
+
+.app form button:hover:disabled {
+    background-color: rgb(255, 185, 185);
 }
 
 .app ul {
@@ -217,7 +225,7 @@ header #logo {
 
 .app ul li {
     position: relative;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     background-color: #181a1e;
     border-bottom: 1px solid #fefefe;
 }
@@ -246,15 +254,23 @@ header #logo {
   }
   
 .app ul li button {
-    float: right;
+    position: absolute;
+    right: 0;
+    top:0;
     cursor: pointer;
+    height: 45.67px;
+    width: 10%;
+    background: #545454;
+    color: #FFFFFF;
+    border-width: 1px;
+    border-color: #fefefe;
 }
 
 .app ul li button:hover {
     background-color: rgb(255, 82, 82);
 }
 
-.complete {
+.completed {
     color: rgba(192, 192, 192, 0.842);
     text-decoration: line-through;
 }

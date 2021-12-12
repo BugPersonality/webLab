@@ -33,36 +33,23 @@
             <div class="container">
                 <div class="app">
                     <h2>ТУДУ</h2>
-                    <form>
-                        <input type="text" placeholder="Task...?">
-                        <button type="submit" onclick="addTask();return false">
+                    <form onsubmit="addTask()">
+                        <input type="text" id="textsend" placeholder="Task...?" onkeyup="success()">
+                        <button type="submit" id="button" disabled>
                             &plus;
                         </button>
                     </form>
-                    <ul></ul>
-                    <!-- <ul>
-                        <li>
-                            <input type="checkbox" onclick="taskComplete(this)" class="check">
-                            <input type="text" value="Test1" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-                            <button type="delete" onclick="removeTask(this)">
-                                &minus;
-                            </button>
-                        </li>
-                        <li>
-                            <input type="checkbox" onclick="taskComplete(this)" class="check">
-                            <input type="text" value="Test2" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-                            <button type="delete" onclick="removeTask(this)">
-                                &minus;
-                            </button>
-                        </li>
-                        <li>
-                            <input type="checkbox" onclick="taskComplete(this)" class="check">
-                            <input type="text" value="Test3" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
-                            <button type="delete" onclick="removeTask(this)">
-                                &minus;
-                            </button>
-                        </li>
-                    </ul> -->
+                    <ul id="tasks">
+                        <template id="template">
+                            <li>
+                                <div id="task">
+                                    <input type="checkbox" onclick="taskComplete(this)" class="check">
+                                    <input type="text" class="task" onfocus="getCurrentTask(this)" readonly="readonly">
+                                    <button onclick="removeTask(this)">&minus;</button>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
                 </div>
             </div>
         </main>
