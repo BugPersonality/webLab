@@ -1,98 +1,140 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/codeStyles.css">
-        <link rel="stylesheet" href="css/submenu.css">
-        <script src="js/code.js"></script>
-        <title>Дубов Данил М33041</title>
-    </head>
+<html lang="ru" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/codeStyles.css">
+    <link rel="stylesheet" href="css/submenu.css">
+    <link rel="stylesheet" href="css/copy.css">
+    <link rel="stylesheet" href="css/copy.css">
+    
+    <script src="js/code.js"></script>
+    <title>Дубов Данил М33041</title>
+</head>
 
-    <body>
-        <header>
-            <div id="logo" onclick="slowScroll('#top')">
-                <img src="images/itsMe.png" alt="Avatar" id="hp">
-                <span>ДубовДанил</span>
+<body>
+<header>
+    <div id="logo" onclick="slowScroll('#top')">
+        <img src="images/itsMe.png" alt="Avatar" id="hp">
+        <span>ДубовДанил</span>
+    </div>
+
+    <nav id="about">
+        <a href="#" title="ФормулаУспеха" onclick="slowScroll('#formulaForSuccess')">Формула</a>
+        <a href="#" title="ЛучшийКод" onclick="slowScroll('#bestCode')">Код</a>
+        <a href="#" title="ТотемноеЖивотное" onclick="slowScroll('#animal')">Тотем</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Меню</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html" type="submenu" name="index" class="subMenuItem">Основная</a>
+                <a href="table.html" type="submenu" name="table" class="subMenuItem">Таблица</a>
+                <a href="contacts.html" type="submenu" name="contacts" class="subMenuItem">Контакты</a>
+                <a href="todo.html" type="submenu" name="contacts" class="subMenuItem">ТУДУ</a>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <nav id="about">
-                <a href="#" title="ФормулаУспеха" onclick="slowScroll('#formulaForSuccess')">Формула</a>
-                <a href="#" title="ЛучшийКод" onclick="slowScroll('#bestCode')">Код</a>
-                <a href="#" title="ТотемноеЖивотное" onclick="slowScroll('#animal')">Тотем</a>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Меню</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="index.html" type="submenu" name="index" class="subMenuItem">Основная</a>
-                      <a href="table.html" type="submenu" name="table" class="subMenuItem">Таблица</a>
-                      <a href="contacts.html" type="submenu" name="contacts" class="subMenuItem">Контакты</a>
-                      <a href="todo.html" type="submenu" name="contacts" class="subMenuItem">ТУДУ</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+<main>
+    <section id="top">
+        <div class="scene">
+            <div class="intro" data-depth="0.5">
+                <h1>Студент ИТМО</h1>
+                <p>Своего рода Электрон</p>
+            </div>
+            <div class="intro" data-depth="0.6">
+                <h1>Студент ИТМО</h1>
+                <p>Своего рода Электрон</p>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="text" data-depth="0.5">
+                <p>HTML<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
+                <p>ЛУЧШИЙ<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
+                <p>ЯП<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
+            </div>
+            <div class="text" data-depth="0.6">
+                <p>HTML<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
+                <p>ЛУЧШИЙ<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
+                <p>ЯП<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
+            </div>
+        </div>
+    </section>
 
-        <main>
-            <section id="top">
-                <div class="intro">
-                    <h1>Студент ИТМО</h1>
-                    <p>Своего рода Электрон</p>
-                </div>
+    <section id="formulaForSuccess">
+        <div class="intro">
+            <h2>Психология травокура</h2>
+            <p>(Формула успеха)</p>
+        </div>
 
-                <div class="text">
-                    <p>HTML<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
-                    <p>ЛУЧШИЙ<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
-                    <p>ЯП<img src="images/itsMe.png" width="40" height="40" alt="Avatar"></p>
-                </div>
-            </section>
-
-            <section id="formulaForSuccess">
-                <div class="intro">
-                  <h2>Психология травокура</h2>
-                  <p>(Формула успеха)</p>
-                </div>
-            
-                <div class="text">
+        <div class="text" id="bouncyCircle">
                     <span>
                         Психология травокура основана на том, что в некоторых странах наркотики декриминализованы,
                         а в американских фильмах подростки курят «травку», как обычные сигареты. Молодые люди считают
                         легкие наркотики безопасными и указывают, сколько живут травокуры на Западе. Это все правда!
                     </span>
-                </div>
-            </section>
+            <button class="btn" data-clipboard-text="Психология травокура основана на том, что в некоторых странах наркотики декриминализованы,
+                        а в американских фильмах подростки курят «травку», как обычные сигареты. Молодые люди считают
+                        легкие наркотики безопасными и указывают, сколько живут травокуры на Западе. Это все правда!"
+                    onclick="copy(this)">
+                Copy to clipboard
+            </button>
+        </div>
+    </section>
 
-            <section id="bestCode">
-                <div class="intro">
-                    <h2>Лучший код?</h2>
-                    <p>.swift</p>
-                </div>
+    <section id="bestCode">
+        <div class="intro">
+            <h2>Лучший код?</h2>
+            <p>.swift</p>
+        </div>
 
-                <div id="code">
+        <div id="code">
 <pre>
 <span class="keys">extension</span> <span class="funcNames">String</span> {
     <span class="keys">func</span> <span class="funcNames">toIntArray</span>() -> [<span class="types">Int</span>] {
-        <span class="keys">return</span> <span class="keys">self</span>.<span class="darkTypes">map</span> { char <span class="keys">in</span>
-            <span class="keys">guard</span> <span class="keys">let</span> char = <span class="types">Int</span>(<span class="types">String</span>(char)) <span class="keys">else</span> {
+        <span class="keys">return</span> <span class="keys">self</span>.<span class="darkTypes">map</span> { char <span
+        class="keys">in</span>
+            <span class="keys">guard</span> <span class="keys">let</span> char = <span class="types">Int</span>(<span
+        class="types">String</span>(char)) <span class="keys">else</span> {
                 <span class="darkTypes">fatalError</span>()
             }
             <span class="keys">return</span> <span class="types">Int</span>(char)
         }
     }
-    <span class="keys">func</span> <span class="funcNames">toStringArray</span>() -> [<span class="darkTypes">String</span>] {
-        <span class="keys">return</span> <span class="keys">self</span>.<span class="darkTypes">map</span> { <span class="types">String</span>($0) }
+    <span class="keys">func</span> <span class="funcNames">toStringArray</span>() -> [<span
+        class="darkTypes">String</span>] {
+        <span class="keys">return</span> <span class="keys">self</span>.<span class="darkTypes">map</span> { <span
+        class="types">String</span>($0) }
     }
 }
-</pre>
-                </div>
-            </section>
 
-            <section id="animal">
-                <div class="intro">
-                  <h2><a href="https://open.spotify.com/track/0TUf9w0vFhdCbLJp7HKG6W?si=b5b6a6fba9834909">ЯЛюблюЛюдей</a></h2>
-                  <p>Дельфин</p>
-                </div>
-            
-                <div id="asciiPicture">
+</pre>
+            <button class="btn" data-clipboard-text="
+extension String {
+    func toIntArray() -> [Int] {
+        return self.map { char in
+            guard let char = Int(String(char)) else {
+                fatalError()
+            }
+            return Int(char)
+        }
+    }
+    func toStringArray() -> [String] {
+        return self.map { String($0) }
+    }
+}" onclick="copy(this)">
+                Copy to clipboard
+            </button>
+        </div>
+    </section>
+
+    <section id="animal">
+        <div class="intro">
+            <h2><a href="https://open.spotify.com/track/0TUf9w0vFhdCbLJp7HKG6W?si=b5b6a6fba9834909">ЯЛюблюЛюдей</a></h2>
+            <p>Дельфин</p>
+        </div>
+
+        <div id="asciiPicture">
 <pre>
         ,-._
         _.-'  '--.
@@ -104,28 +146,34 @@
 ._      ._      ._      ._
 _.-._)`\_.-._)`\_.-._)`\_.-._)`\_.-._
 </pre>
-                </div>
-            </section>
-        </main>        
-        
-        <footer>
-            © Дубов Данил Денисович
-        </footer>
+        </div>
+    </section>
+</main>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            function slowScroll(id) {
-            $('html,body').animate({
-                scrollTop: $(id).offset().top - 100
-            }, 'slow');
-            }
+<footer>
+    © Дубов Данил Денисович
+</footer>
 
-            $(document).on("scroll", function() {
-            if($(window).scrollTop() === 0) 
-                $("header").removeClass("fixed");
-            else
-                $("header").attr("class", "fixed");
-            });
-        </script>
-    </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html,body').animate({
+            scrollTop: $(id).offset().top - 100
+        }, 'slow');
+    }
+
+    $(document).on("scroll", function () {
+        if ($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+        else
+            $("header").attr("class", "fixed");
+    });
+</script>
+</body>
+<script src="https://unpkg.com/@mojs/core"></script>
+<script src="js/bursts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+<script src="js/copy.js"></script>
 </html>
